@@ -1,0 +1,119 @@
+section {
+    text-align: center;
+    width: 80%;
+    margin: 50px auto;
+}
+section .todo .display {
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section .todo .display input {
+    background-color: #eee;
+    border: none;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 0 10px;
+    color: #0be881;
+    font-weight: 500;
+}
+section .todo .display input:focus {
+    outline: 2px solid #0be881;
+}
+section .todo .display input::placeholder {
+    color: #0be881;
+}
+section .todo .display span {
+    color: #fff;
+    background-color: #0be881;
+    padding: 5px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 9;
+}
+section .todo .display span .cover {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.415);
+    top: 0;
+    left: 0;
+}
+section .todo .display span:hover .cover {
+    animation: nEffect .7s linear;
+}
+@keyframes nEffect {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0%;
+        left: 100%;
+    }
+}
+
+.tasks {
+    width: 100%;
+}
+.tasks .task {
+    padding: 5px 0;
+    border-radius: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tasks .task p {
+    background-color: #0be881;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+.tasks .task span {
+    color: #fff;
+    background-color: #ff4d4d;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.done {
+    text-decoration: line-through;
+}
+
+.tasks-details {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 100px;
+}
+.tasks-details .total,
+.tasks-details .completed {
+    font-size: 14px;
+    color: #333;
+}
+.tasks-details .total span,
+.tasks-details .completed span {
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: default;
+}
+.tasks-details .total span {
+    background-color: #0be881;
+}
+.tasks-details .completed span {
+    background-color: #ff4d4d;
+}
